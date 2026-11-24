@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unai | Software Engineering, Consultancy &amp; AI Proposition Development</title>
+  <meta name="description" content="Unai provides software engineering, consultancy and AI proposition development.">
+  <link rel="canonical" href="https://www.unai.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.unai.com/">
+  <meta property="og:title" content="Unai">
+  <meta property="og:description" content="Software engineering, consultancy and AI proposition development.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0d0d0d" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --ink: #111111;
+      --muted: #6b6b6b;
+      --line: #e4e4e4;
+      --gutter: max(16px, 5vw);
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d0d0d;
+        --ink: #f2f2f2;
+        --muted: #9a9a9a;
+        --line: #2a2a2a;
+      }
+      .brand img { filter: invert(1); }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding-inline: var(--gutter);
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; border-radius: 2px; }
+
+    /* Header */
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-block: 28px;
+    }
+    .brand { display: inline-flex; line-height: 0; }
+    .brand img { width: 112px; height: auto; }
+    .top-link {
+      font-size: 0.9375rem;
+      text-decoration: none;
+      color: var(--muted);
+      transition: color .15s ease;
+    }
+    .top-link:hover { color: var(--ink); }
+
+    /* Hero */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-block: clamp(48px, 10vh, 120px);
+    }
+    .label {
+      margin: 0 0 20px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.25rem, 7.2vw, 5.25rem);
+      font-weight: 600;
+      line-height: 1.04;
+      letter-spacing: -0.035em;
+      text-wrap: balance;
+    }
+    h1 span { display: block; }
+    h1 span + span { margin-top: 0.06em; }
+
+    .contact {
+      margin-top: clamp(48px, 9vh, 96px);
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px 32px;
+    }
+    .contact .label { margin: 0; }
+    .email {
+      font-size: clamp(1.125rem, 2.4vw, 1.5rem);
+      font-weight: 500;
+      text-decoration: none;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-size: 100% 1px;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      padding-bottom: 2px;
+      overflow-wrap: anywhere;
+    }
+    .email:hover { background-size: 100% 2px; }
+
+    /* Footer */
+    footer {
+      padding-block: 28px;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap top">
+    <a class="brand" href="/" aria-label="Unai home">
+      <img src="assets/unai-logo.png" alt="Unai" width="164" height="58">
+    </a>
+    <a class="top-link" href="mailto:james.baldwin@unai.com">Contact</a>
+  </header>
+
+  <main class="wrap">
+    <p class="label">What we do</p>
+    <h1>
+      <span>Software Engineering</span>
+      <span>Consultancy</span>
+      <span>AI Proposition Development</span>
+    </h1>
+
+    <div class="contact">
+      <p class="label">Get in touch</p>
+      <a class="email" href="mailto:james.baldwin@unai.com">james.baldwin@unai.com</a>
+    </div>
+  </main>
+
+  <footer class="wrap">
+    &copy; <span id="year">2026</span> Unai
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
